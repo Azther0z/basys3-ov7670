@@ -1,0 +1,378 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Apr 22 15:40:38 2026
+# Process ID         : 65371
+# Current directory  : /home/azther0z/Desktop/project2/project_1.runs/synth_1
+# Command line       : vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file           : /home/azther0z/Desktop/project2/project_1.runs/synth_1/top.vds
+# Journal file       : /home/azther0z/Desktop/project2/project_1.runs/synth_1/vivado.jou
+# Running On         : Saint-ThinkPad-X280
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22.1
+# Processor Detail   : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+# CPU Frequency      : 900.027 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8215 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 10363 MB
+# Available Virtual  : 3310 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:01:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1613.883 ; gain = 64.059 ; free physical = 242 ; free virtual = 2739
+Command: read_checkpoint -auto_incremental -incremental /home/azther0z/Desktop/project2/project_1.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/azther0z/Desktop/project2/project_1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 65483
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2219.281 ; gain = 484.156 ; free physical = 212 ; free virtual = 1963
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/azther0z/Desktop/project2/src/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov7670_registers' [/home/azther0z/Desktop/project2/src/ov7670_registers.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/azther0z/Desktop/project2/src/ov7670_registers.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'ov7670_registers' (0#1) [/home/azther0z/Desktop/project2/src/ov7670_registers.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sccb_master' [/home/azther0z/Desktop/project2/src/sccb_master.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sccb_master' (0#1) [/home/azther0z/Desktop/project2/src/sccb_master.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov7670_capture' [/home/azther0z/Desktop/project2/src/ov7670_capture.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ov7670_capture' (0#1) [/home/azther0z/Desktop/project2/src/ov7670_capture.v:3]
+INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [/home/azther0z/Desktop/project2/src/frame_buffer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (0#1) [/home/azther0z/Desktop/project2/src/frame_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [/home/azther0z/Desktop/project2/src/vga_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [/home/azther0z/Desktop/project2/src/vga_controller.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/azther0z/Desktop/project2/src/top.v:3]
+WARNING: [Synth 8-3917] design top has port ov7670_pwdn driven by constant 0
+WARNING: [Synth 8-3917] design top has port ov7670_reset driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2311.250 ; gain = 576.125 ; free physical = 189 ; free virtual = 1874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2326.094 ; gain = 590.969 ; free physical = 186 ; free virtual = 1870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2326.094 ; gain = 590.969 ; free physical = 186 ; free virtual = 1870
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2326.094 ; gain = 0.000 ; free physical = 182 ; free virtual = 1867
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/azther0z/Desktop/project2/constraints/basys3.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ov7670_pclk_IBUF'. [/home/azther0z/Desktop/project2/constraints/basys3.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/azther0z/Desktop/project2/constraints/basys3.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/azther0z/Desktop/project2/constraints/basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/azther0z/Desktop/project2/constraints/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2436.832 ; gain = 0.000 ; free physical = 183 ; free virtual = 1869
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2436.867 ; gain = 0.000 ; free physical = 183 ; free virtual = 1870
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2436.867 ; gain = 701.742 ; free physical = 217 ; free virtual = 1919
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2444.836 ; gain = 709.711 ; free physical = 217 ; free virtual = 1919
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2444.836 ; gain = 709.711 ; free physical = 217 ; free virtual = 1919
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ov7670_registers'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                              000 |                              000
+                   WRITE |                              001 |                              001
+                    WAIT |                              010 |                              010
+               WAIT_DONE |                              011 |                              011
+                   DELAY |                              100 |                              100
+                  FINISH |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ov7670_registers'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 2444.836 ; gain = 709.711 ; free physical = 197 ; free virtual = 1906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---RAMs : 
+	             900K Bit	(76800 X 12 bit)          RAMs := 1     
++---Muxes : 
+	   6 Input   24 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   7 Input    8 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 10    
+	   2 Input    1 Bit        Muxes := 18    
+	   3 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design top has port ov7670_pwdn driven by constant 0
+WARNING: [Synth 8-3917] design top has port ov7670_reset driven by constant 1
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__0) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__1) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__2) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__3) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__4) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__5) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__6) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__7) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__8) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__9) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (bram_inst/ram_reg_mux_sel_a_pos_1__10) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 2444.836 ; gain = 709.711 ; free physical = 194 ; free virtual = 1878
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-----------------+------------+---------------+----------------+
+|Module Name      | RTL Object | Depth x Width | Implemented As | 
++-----------------+------------+---------------+----------------+
+|ov7670_registers | reg_addr   | 32x8          | LUT            | 
+|ov7670_registers | reg_data   | 32x8          | LUT            | 
++-----------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object        | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top         | bram_inst/ram_reg | 75 K x 12(NO_CHANGE)   | W |   | 75 K x 12(WRITE_FIRST) |   | R | Port A and B     | 0      | 36     | 
++------------+-------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 2498.836 ; gain = 763.711 ; free physical = 174 ; free virtual = 1807
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:32 . Memory (MB): peak = 2534.883 ; gain = 799.758 ; free physical = 204 ; free virtual = 1750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object        | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top         | bram_inst/ram_reg | 75 K x 12(NO_CHANGE)   | W |   | 75 K x 12(WRITE_FIRST) |   | R | Port A and B     | 0      | 36     | 
++------------+-------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_0__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_4__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_5__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_6__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_7__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_8__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_9__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_10__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_inst/ram_reg_1_11__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:30 ; elapsed = 00:01:33 . Memory (MB): peak = 2534.883 ; gain = 799.758 ; free physical = 205 ; free virtual = 1751
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 2700.695 ; gain = 965.570 ; free physical = 182 ; free virtual = 1617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 2700.695 ; gain = 965.570 ; free physical = 179 ; free virtual = 1615
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 2700.695 ; gain = 965.570 ; free physical = 179 ; free virtual = 1616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 2700.695 ; gain = 965.570 ; free physical = 175 ; free virtual = 1612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 2703.664 ; gain = 968.539 ; free physical = 176 ; free virtual = 1613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 2703.664 ; gain = 968.539 ; free physical = 176 ; free virtual = 1613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |CARRY4   |    21|
+|3     |LUT1     |     5|
+|4     |LUT2     |    80|
+|5     |LUT3     |    16|
+|6     |LUT4     |    70|
+|7     |LUT5     |    44|
+|8     |LUT6     |    48|
+|9     |MUXF7    |     2|
+|10    |RAMB36E1 |    36|
+|13    |FDRE     |   189|
+|14    |FDSE     |     4|
+|15    |IBUF     |    13|
+|16    |OBUF     |    18|
+|17    |OBUFT    |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 2703.664 ; gain = 968.539 ; free physical = 176 ; free virtual = 1613
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 2703.664 ; gain = 857.766 ; free physical = 176 ; free virtual = 1613
+Synthesis Optimization Complete : Time (s): cpu = 00:01:46 ; elapsed = 00:01:49 . Memory (MB): peak = 2703.672 ; gain = 968.539 ; free physical = 176 ; free virtual = 1614
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2703.672 ; gain = 0.000 ; free physical = 182 ; free virtual = 1614
+INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2759.691 ; gain = 0.000 ; free physical = 327 ; free virtual = 1776
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 68c58ddf
+INFO: [Common 17-83] Releasing license: Synthesis
+60 Infos, 17 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:19 ; elapsed = 00:02:09 . Memory (MB): peak = 2759.727 ; gain = 1145.844 ; free physical = 340 ; free virtual = 1790
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1923.884; main = 1782.713; forked = 357.687
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3616.531; main = 2759.695; forked = 1071.715
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2783.703 ; gain = 0.000 ; free physical = 339 ; free virtual = 1790
+INFO: [Common 17-1381] The checkpoint '/home/azther0z/Desktop/project2/project_1.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 22 15:43:12 2026...
