@@ -1,0 +1,102 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed May 13 00:46:17 2026
+| Host         : Saint-ThinkPad-X280 running 64-bit Linux Mint 22.1
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    24 |
+|    Minimum number of control sets                        |    24 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    96 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    24 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     4 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              19 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              52 |           23 |
+| Yes          | No                    | No                     |              16 |           12 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             129 |           37 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+---------------------------------+----------------------------+------------------+----------------+--------------+
+|       Clock Signal       |          Enable Signal          |      Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+---------------------------------+----------------------------+------------------+----------------+--------------+
+|  clk_100mhz_IBUF_BUFG    | u_sccb/scl                      | global_rst                 |                1 |              1 |         1.00 |
+|  clk_100mhz_IBUF_BUFG    |                                 |                            |                1 |              1 |         1.00 |
+| ~cam_pclk_IBUF_BUFG      |                                 | cam_rst                    |                2 |              2 |         1.00 |
+| ~cam_pclk_IBUF_BUFG      |                                 |                            |                3 |              3 |         1.00 |
+|  cam_pclk_IBUF_BUFG      |                                 |                            |                2 |              3 |         1.50 |
+| ~cam_pclk_IBUF_BUFG      | u_capture/first_byte[3]_i_1_n_0 |                            |                3 |              4 |         1.33 |
+|  clk_100mhz_IBUF_BUFG    | u_sccb/bit_cnt[0]               | global_rst                 |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG    | u_sccb/state[0]                 | global_rst                 |                1 |              4 |         4.00 |
+|  clk_100mhz_IBUF_BUFG    | u_cfg/rom_idx[0]                | global_rst                 |                4 |              7 |         1.75 |
+|  clk_100mhz_IBUF_BUFG    |                                 | u_sccb/clk_cnt[7]_i_1_n_0  |                3 |              8 |         2.67 |
+|  clk_100mhz_IBUF_BUFG    |                                 | global_rst                 |                4 |              8 |         2.00 |
+|  clk_100mhz_IBUF_BUFG    | u_sccb/tx_byte_0[0]             | global_rst                 |                3 |              8 |         2.67 |
+| ~cam_pclk_IBUF_BUFG      | u_capture/byte_cnt              | u_capture/h_cnt[9]_i_1_n_0 |                3 |             10 |         3.33 |
+| ~cam_pclk_IBUF_BUFG      | u_capture/v_cnt0                | u_capture/v_cnt[0]         |                3 |             10 |         3.33 |
+|  u_clk_wiz/inst/clk_out1 | u_vga/vcount_0[0]               | pix_rst                    |                4 |             10 |         2.50 |
+|  u_clk_wiz/inst/clk_out1 |                                 | u_vga/hcount[9]_i_1_n_0    |                3 |             10 |         3.33 |
+|  u_clk_wiz/inst/clk_out1 |                                 | pix_rst                    |                9 |             12 |         1.33 |
+|  u_clk_wiz/inst/clk_out1 |                                 | r_out0                     |                2 |             12 |         6.00 |
+|  u_clk_wiz/inst/clk_out1 |                                 |                            |                7 |             12 |         1.71 |
+| ~cam_pclk_IBUF_BUFG      | u_capture/wr_data[11]_i_1_n_0   |                            |                9 |             12 |         1.33 |
+|  clk_100mhz_IBUF_BUFG    | u_cfg/sccb_start_i_1_n_0        | global_rst                 |                3 |             16 |         5.33 |
+| ~cam_pclk_IBUF_BUFG      | u_capture/wr_addr[16]_i_2_n_0   | u_capture/v_cnt[0]         |                4 |             17 |         4.25 |
+|  clk_100mhz_IBUF_BUFG    | u_cfg/wait_cnt[17]_i_1_n_0      | global_rst                 |                4 |             18 |         4.50 |
+|  clk_100mhz_IBUF_BUFG    | sel                             | rst_cnt0                   |                6 |             24 |         4.00 |
++--------------------------+---------------------------------+----------------------------+------------------+----------------+--------------+
+
+
