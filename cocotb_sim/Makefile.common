@@ -1,0 +1,44 @@
+# Common Makefile for Cocotb tests
+# This file is included by module-specific Makefiles
+
+SIM ?= icarus
+TOPLEVEL_LANG ?= verilog
+
+# Paths relative to the module directory (where make is called)
+SIM_DIR = $(shell pwd)
+COCOTB_SIM_ROOT = $(SIM_DIR)/..
+REPO_ROOT = $(COCOTB_SIM_ROOT)/..
+SRC_DIR = $(REPO_ROOT)/project.srcs/sources_1/new
+
+VERILOG_SOURCES += $(SRC_DIR)/$(TOPLEVEL).v
+VERILOG_SOURCES += $(COCOTB_SIM_ROOT)/sim_stubs.v
+
+# Add dependencies if they exist
+ifeq ($(TOPLEVEL), vgaController)
+    VERILOG_SOURCES += $(SRC_DIR)/filter.v
+endif
+
+ifeq ($(TOPLEVEL), cameraConfig)
+    VERILOG_SOURCES += $(SRC_DIR)/sccbMaster.v
+endif
+
+ifeq ($(TOPLEVEL), topModule)
+    VERILOG_SOURCES += $(SRC_DIR)/cameraCapture.v
+    VERILOG_SOURCES += $(SRC_DIR)/cameraConfig.v
+    VERILOG_SOURCES += $(SRC_DIR)/filter.v
+    VERILOG_SOURCES += $(SRC_DIR)/pulseSync.v
+    VERILOG_SOURCES += $(SRC_DIR)/sccbMaster.v
+    VERILOG_SOURCES += $(SRC_DIR)/vgaController.v
+endif
+
+# Compilation arguments
+COMPILE_ARGS += -g2012
+
+# Waveform generation: Instantiate cocotb_dump as a second top-level module
+ifeq ($(SIM), icarus)
+    COMPILE_ARGS += -s cocotb_dump
+endif
+
+# Cocotb settings
+MODULE = testbench
+include $(shell cocotb-config --makefiles)/Makefile.sim
