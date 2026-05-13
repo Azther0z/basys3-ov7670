@@ -1,0 +1,21 @@
+# Vivado Project Files
+project.cache/
+project.hw/
+project.ip_user_files/
+project.runs/
+project.gen/
+*.jou
+*.log
+usage_statistics_webtalk.*
+
+# Cocotb / Simulation Artifacts
+**/sim_build*/
+**/__pycache__/
+**/results.xml
+**/waves.vcd
+**/*.vvp
+**/results/
+
+# OS Files
+.DS_Store
+Thumbs.db
