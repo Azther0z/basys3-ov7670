@@ -29,4 +29,4 @@ do
     cd ..
 done
 
-echo "Tests completed. Results are in the 'results/' folder."
+echo "Tests completed."

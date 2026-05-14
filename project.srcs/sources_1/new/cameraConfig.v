@@ -172,9 +172,9 @@ module cameraConfig (
         end
         WAIT_DONE: begin
           if (sccbDone) begin
-            romIndex  <= romIndex + 7'd1;
+            romIndex    <= romIndex + 7'd1;
             waitCounter <= 18'd0;
-            state    <= START;
+            state       <= RESET_WAIT;
           end
         end
         DONE: begin
